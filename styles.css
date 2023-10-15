@@ -53,3 +53,10 @@ body {
     overflow: hidden;
     transition: .5s;
 }
+
+/*JavaScript Styling Link*/
+
+.accordian .content-container.active .answer {
+    height: 150px;
+    overflow: visible;
+}

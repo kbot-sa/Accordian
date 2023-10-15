@@ -1,5 +1,10 @@
-let answer = document.querySelector('.answer');
+const accordian = document.getElementsByClassName('content-container');
 
-answer.addEventListener('click', function() {
-    answer.style.display = 'block';
-})
+
+for( i = 0; i < accordian.length; i++) {
+
+    accordion[i].addEventListener('click', function () {
+        this.classList.toggle('active');
+    })
+
+};
