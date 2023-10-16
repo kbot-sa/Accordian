@@ -1,9 +1,4 @@
-* {
-    box-sizing: border-box;
-    padding: 0;
-    border: 0;
-    margin: 0;
-}
+
 
 body {
     background: url(img/FAQbackground.jpg) no-repeat center center/cover;
@@ -13,39 +8,38 @@ body {
     align-items: center;
 }
 
-.accordian {
+.accordion {
     width: 65%;
     background-color: #fff;
     padding: 30px;
     border-radius: 30px;
 }
 
-.accordian .accordian-title {
+.accordion .accordion-title {
     font-size: 30px;
-    font-weight: 900;
     margin-bottom: 30px;
     text-align: center;
+    
 }
 
-.accordian .content-container .question {
+.accordion .content-container .question {
     padding: 15px 0px;
     font-size: 25px;
-    border-bottom: 1px solid black;
     cursor: pointer;
+    border-bottom: 1px solid black;
 
     position: relative;
 }
 
-.accordian .content-container .question::after {
+.accordion .content-container .question::after {
     content: '+';
-
     position: absolute;
     right: -5px;
 }
 
-.accordian .content-container .answer {
+.accordion .content-container .answer {
     padding-top: 15px;
-    font-size: 22px;
+    font-size: 20px;
     line-height: 1.5;
     width: 100%;
 
@@ -54,9 +48,19 @@ body {
     transition: .5s;
 }
 
-/*JavaScript Styling Link*/
-
-.accordian .content-container.active .answer {
+.accordion .content-container.active .answer {
     height: 150px;
-    overflow: visible;
+}
+
+.accordion .content-container.active .question {
+    font-size: 20px;
+    transition: .5s;
+}
+
+.accordion .content-container.active .question::after {
+    content: '-';
+    position: absolute;
+    right: -5px;
+    transition: .8s;
+    font-size: 30px;
 }
